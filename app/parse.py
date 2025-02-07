@@ -22,9 +22,7 @@ class Quote:
 
 
 def parse_single_quote(quote: Tag) -> Quote:
-    text = quote.select_one(".text").text,
-    author = quote.select_one(".author").text,
-    tags = [tag.text for tag in quote.select_one(".tags").select(".tag")]
+
     quote = Quote(
         text=quote.select_one(".text").text,
         author=quote.select_one(".author").text,
